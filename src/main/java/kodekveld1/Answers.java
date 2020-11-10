@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 /**
  * Inneholder løsningsforslag til alle oppgaver
  */
-public class Answars {
+public class Answers {
 	private static final List<Integer> numbers = Arrays.asList(1,10,100,2,20,3,30,4,5,6,7,8,9,50,40);
 	private static final List<String> names = Arrays.asList("Lars","Arne","Hans Ludvig");
 
