@@ -1,19 +1,18 @@
 package kodekveld1;
 
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Task {
 	private static final List<Integer> numbers = Arrays.asList(1,10,100,2,20,3,30,4,5,6,7,8,9,50,40);
 	private static final List<String> names = Arrays.asList("Lars","Arne","Hans Ludvig");
-
 
 	/**
 	 * Sort the array numbersUnsoured in ASC order
 	 * @return List<Integer>
 	 */
 	public List<Integer> numbersSortASC(){
-		return null;
+		return numbers.stream().sorted().collect(Collectors.toList());
 	}
 
 	/**
@@ -21,7 +20,7 @@ public class Task {
 	 * @return List<Integer>
 	 */
 	public List<Integer> numbersSortDESC(){
-		return null;
+		return numbers.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
 	}
 
 	/**
@@ -29,7 +28,7 @@ public class Task {
 	 * @return int
 	 */
 	public Integer numbersSum(){
-		return null;
+		return numbers.stream().mapToInt(Integer::intValue).sum();
 	}
 
 	/**
@@ -37,8 +36,59 @@ public class Task {
 	 * @return List<String>
 	 */
 	public List<String> namesASC(){
-		return null;
+		return names.stream().sorted().collect(Collectors.toList());
 	}
+
+	/**
+	 * Interfaces for tasks about Lambda functions
+	 */
+	@FunctionalInterface
+	interface InterfaceAnonymousLambdaFunction {
+		//A method with no parameter
+		public String sayHello();
+	}
+	/**
+	 * Using an anonymous Lambda function return a String that reads "Hello Cap"
+	 * @return String
+	 */
+	String anonymousLambdaFunction() {
+		InterfaceAnonymousLambdaFunction message = () -> "Hello Cap";
+		return message.sayHello();
+	}
+
+	@FunctionalInterface
+	interface DoubleValueInterface {
+		public int doubleValue(int number);
+	}
+	int doubleValue() {
+		DoubleValueInterface doubleNumber = (number) -> number*2;
+		return doubleNumber.doubleValue(10);
+	}
+
+	@FunctionalInterface
+	interface StringConcatInterface {
+		public String stringConcat(String a, String b);
+	}
+	String StringConcat() {
+		StringConcatInterface result = (string1, string2) -> string1 + string2;
+		return result.stringConcat("Hello ", "Cap");
+	}
+
+	/**
+	 * Using both streams and Lambda return the sum of the number array
+	 * @return int
+	 */
+	public int sumOfNumbers(){
+		return numbers.stream().mapToInt(number -> number).sum();
+	}
+
+	public void createMap() {
+		Map<Integer,String> map = new HashMap<Integer,String>();
+		numbers.forEach(number -> {
+
+		});
+	}
+
 
 
 }
