@@ -10,8 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 public class Tests {
-	Task tasks = new Task(); 				//TODO Bruk denne dersom du vil teste dine egne metoder
-	Answers answers = new Answers();  		//TODO Bruk denne dersom du vil kjøre løsningsforslaget
+	//Task tasks = new Task(); 				//TODO Bruk denne dersom du vil teste dine egne metoder
+	Answers tasks = new Answers();  		//TODO Bruk denne dersom du vil kjøre løsningsforslaget
 
 	private static final List<Integer> numbersSortedASC = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 100);
 	private static final List<Integer> numbersSortedDESC = Arrays.asList(100, 50, 40, 30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1);

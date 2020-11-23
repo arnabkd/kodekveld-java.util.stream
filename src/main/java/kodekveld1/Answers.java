@@ -59,6 +59,15 @@ public class Answers {
     }
 
     /**
+     * Return numbers with least two digits in descending order.
+     *
+     * @return List<Integer>
+     */
+    public List<Integer> numbersWithLeastTwoDigitsDESC() {
+        return numbers.stream().filter(x -> x >= 10).sorted().collect(Collectors.toList());
+    }
+
+    /**
      * Interfaces for tasks about Lambda functions
      */
     @FunctionalInterface
@@ -95,9 +104,5 @@ public class Answers {
     String StringConcat() {
         Task.StringConcatInterface result = (string1, string2) -> string1 + string2;
         return result.stringConcat("Hello ", "Cap");
-    }
-
-    public List<Integer> numbersWithLeastTwoDigitsDESC() {
-        return numbers.stream().filter(x -> x >= 10).sorted().collect(Collectors.toList());
     }
 }

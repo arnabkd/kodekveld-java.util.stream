@@ -53,6 +53,15 @@ public class Task {
     }
 
     /**
+     * Return numbers with least two digits in descending order.
+     *
+     * @return List<Integer>
+     */
+    public List<Integer> numbersWithLeastTwoDigitsDESC() {
+        return null;
+    }
+
+    /**
      * Interfaces for tasks about Lambda functions
      */
     @FunctionalInterface
@@ -88,7 +97,4 @@ public class Task {
         return null;
     }
 
-	public List<Integer> numbersWithLeastTwoDigitsDESC() {
-		return null;
-	}
 }
