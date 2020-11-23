@@ -1,8 +1,6 @@
 package kodekveld1;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 /**
@@ -43,5 +41,55 @@ public class Answers {
 	 */
 	public List<String> namesASC(){
 		return names.stream().sorted().collect(Collectors.toList());
+	}
+
+	/**
+	 * Interfaces for tasks about Lambda functions
+	 */
+	@FunctionalInterface
+	interface InterfaceAnonymousLambdaFunction {
+		//A method with no parameter
+		public String sayHello();
+	}
+	/**
+	 * Using an anonymous Lambda function return a String that reads "Hello Cap"
+	 * @return String
+	 */
+	String anonymousLambdaFunction() {
+		Task.InterfaceAnonymousLambdaFunction message = () -> "Hello Cap";
+		return message.sayHello();
+	}
+
+	@FunctionalInterface
+	interface DoubleValueInterface {
+		public int doubleValue(int number);
+	}
+	int doubleValue() {
+		Task.DoubleValueInterface doubleNumber = (number) -> number*2;
+		return doubleNumber.doubleValue(10);
+	}
+
+	@FunctionalInterface
+	interface StringConcatInterface {
+		public String stringConcat(String a, String b);
+	}
+	String StringConcat() {
+		Task.StringConcatInterface result = (string1, string2) -> string1 + string2;
+		return result.stringConcat("Hello ", "Cap");
+	}
+
+	/**
+	 * Using both streams and Lambda return the sum of the number array
+	 * @return int
+	 */
+	public int sumOfNumbers(){
+		return numbers.stream().mapToInt(number -> number).sum();
+	}
+
+	public void createMap() {
+		Map<Integer,String> map = new HashMap<Integer,String>();
+		numbers.forEach(number -> {
+
+		});
 	}
 }

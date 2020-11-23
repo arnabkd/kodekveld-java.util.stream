@@ -12,7 +12,7 @@ public class Task {
 	 * @return List<Integer>
 	 */
 	public List<Integer> numbersSortASC(){
-		return numbers.stream().sorted().collect(Collectors.toList());
+		return null;
 	}
 
 	/**
@@ -20,7 +20,7 @@ public class Task {
 	 * @return List<Integer>
 	 */
 	public List<Integer> numbersSortDESC(){
-		return numbers.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+		return null;
 	}
 
 	/**
@@ -28,7 +28,7 @@ public class Task {
 	 * @return int
 	 */
 	public Integer numbersSum(){
-		return numbers.stream().mapToInt(Integer::intValue).sum();
+		return null;
 	}
 
 	/**
@@ -36,7 +36,7 @@ public class Task {
 	 * @return List<String>
 	 */
 	public List<String> namesASC(){
-		return names.stream().sorted().collect(Collectors.toList());
+		return null;
 	}
 
 	/**
@@ -52,8 +52,7 @@ public class Task {
 	 * @return String
 	 */
 	String anonymousLambdaFunction() {
-		InterfaceAnonymousLambdaFunction message = () -> "Hello Cap";
-		return message.sayHello();
+		return null;
 	}
 
 	@FunctionalInterface
@@ -61,8 +60,7 @@ public class Task {
 		public int doubleValue(int number);
 	}
 	int doubleValue() {
-		DoubleValueInterface doubleNumber = (number) -> number*2;
-		return doubleNumber.doubleValue(10);
+		return 0;
 	}
 
 	@FunctionalInterface
@@ -70,8 +68,7 @@ public class Task {
 		public String stringConcat(String a, String b);
 	}
 	String StringConcat() {
-		StringConcatInterface result = (string1, string2) -> string1 + string2;
-		return result.stringConcat("Hello ", "Cap");
+		return null;
 	}
 
 	/**
