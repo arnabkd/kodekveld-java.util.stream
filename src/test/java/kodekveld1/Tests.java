@@ -15,6 +15,7 @@ public class Tests {
 
 	private static final List<Integer> numbersSortedASC = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30, 40, 50, 100);
 	private static final List<Integer> numbersSortedDESC = Arrays.asList(100, 50, 40, 30, 20, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1);
+	private static final List<Integer> numbersAbove40 = Arrays.asList(100, 50);
 	private static final List<String> namesASC = Arrays.asList("Arne", "Hans Ludvig", "Lars");
 	private static final String anonymousLambdaFunctionString = "Hello Cap";
 
@@ -50,7 +51,8 @@ public class Tests {
 		assertEquals(namesASC, tasks.namesASC());
 	}
 
-	//finn på mer
+	@Test
+	public void numbersAbove40() { assertEquals(numbersAbove40, tasks.numbersAbove40());}
 
 	@Test
 	public void testAnonymousLambdaFunction() {

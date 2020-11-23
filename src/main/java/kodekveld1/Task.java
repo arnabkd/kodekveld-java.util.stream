@@ -40,6 +40,14 @@ public class Task {
 	}
 
 	/**
+	 * Return a list with all the numbers in the number array that are greater than 50. Must use filter!
+	 * @return List<Integer>
+	 */
+	public List<Integer> numbersAbove40() {
+		return null;
+	}
+
+	/**
 	 * Interfaces for tasks about Lambda functions
 	 */
 	@FunctionalInterface
