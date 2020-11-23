@@ -97,4 +97,7 @@ public class Answers {
         return result.stringConcat("Hello ", "Cap");
     }
 
+    public List<Integer> numbersWithLeastTwoDigitsDESC() {
+        return numbers.stream().filter(x -> x >= 10).sorted().collect(Collectors.toList());
+    }
 }
