@@ -64,7 +64,7 @@ public class Answers {
      * @return List<Integer>
      */
     public List<Integer> numbersWithLeastTwoDigitsDESC() {
-        return numbers.stream().filter(x -> x >= 10).sorted().collect(Collectors.toList());
+        return numbersSortDESC().stream().filter(x -> x >= 10).collect(Collectors.toList());
     }
 
     /**
