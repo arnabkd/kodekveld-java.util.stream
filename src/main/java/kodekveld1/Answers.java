@@ -59,7 +59,7 @@ public class Answers {
     }
 
     /**
-     * Return numbers with least two digits in descending order.
+     * Return numbers with at least two digits, in descending order.
      *
      * @return List<Integer>
      */
